@@ -96,7 +96,7 @@
                     Elementy na tej liście pojwaiaja się gdy zgodzisz się na wymianę swojej książki na jedną z książek innego użytkownika.
                 </em></p>
             </div>
-            <table id="table" class="display table table-striped">
+            <table id="table" class="display table table-responsive table-striped" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>Data</th>

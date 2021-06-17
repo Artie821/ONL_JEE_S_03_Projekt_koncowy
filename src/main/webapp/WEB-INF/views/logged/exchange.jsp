@@ -119,7 +119,7 @@
     </div>
     <div class="row">
         <div class="container p-3 my-3 border shadow p-1 mb-1 bg-white rounded ">
-            <table id="table" class="display table table-striped">
+            <table id="table" class="display table table-striped table-responsive" style="width: 100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>ISBN</th>
