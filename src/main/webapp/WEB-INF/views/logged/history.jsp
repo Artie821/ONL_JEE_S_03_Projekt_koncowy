@@ -99,17 +99,17 @@
             <table id="table" class="display table table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>DATA TRANZAKCJI</th>
-                    <th>TWOJA KSIĄŻKA<small class="form-text text-muted">
+                    <th>Data</th>
+                    <th>Twoja książka<small class="form-text text-muted">
                         Twoja książka którą wymieniłeś
                     </small></th>
-                    <th>KONTRAKTOR<small class="form-text text-muted">
+                    <th>Kontraktor<small class="form-text text-muted">
                         Nazwa użytkowanika który zaproponował Ci wymianę.
                     </small></th>
-                    <th>JEGO KSIĄŻKA<small class="form-text text-muted">
+                    <th>Jego książka<small class="form-text text-muted">
                         Książka która od teraz należy do Ciebie
                     </small></th>
-                    <th>AKCJA</th>
+                    <th>Akcja</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -178,17 +178,17 @@
             <table id="table2" class="display table table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>DATA TRANZAKCJI</th>
-                    <th>TWOJA KSIĄŻKA<small class="form-text text-muted">
+                    <th>Data</th>
+                    <th>Twoja książka<small class="form-text text-muted">
                         Twoja książka którą wymieniłeś
                     </small></th>
-                    <th>KONTRAKTOR<small class="form-text text-muted">
+                    <th>Kontraktor<small class="form-text text-muted">
                         Nazwa użytkowanika któremu zaproponowałeś wymianę.
                     </small></th>
-                    <th>JEGO KSIĄŻKA<small class="form-text text-muted">
+                    <th>Jego książka<small class="form-text text-muted">
                         Książka która od teraz należy do Ciebie
                     </small></th>
-                    <th>AKCJA</th>
+                    <th>Akcja</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -107,13 +107,12 @@
     </div>
     <div class="row">
         <div class="container p-3 my-3 border shadow p-1 mb-1 bg-white rounded ">
-            <table id="table" class="display table table-striped">
+            <table id="table" class="display table table-striped" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>ISBN</th>
                     <th>TYTUŁ</th>
                     <th>AUTOR</th>
-                    <th>OPIS</th>
                     <th>AKCJA</th>
                 </tr>
                 </thead>
@@ -123,7 +122,6 @@
                         <td><c:out value="${book.isbn}"/></td>
                         <td><c:out value="${book.title}"/></td>
                         <td><c:out value="${book.author}"/></td>
-                        <td><c:out value="${book.description}"/></td>
                         <td>
                             <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal"
                                     data-target="#exampleModal" data-name="${book.id}">

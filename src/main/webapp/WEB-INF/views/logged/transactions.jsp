@@ -101,14 +101,14 @@
             <table id="table" class="display table table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>NAZWA KSIĄŻKI<small class="form-text text-muted">
+                    <th>Nazwa książki<small class="form-text text-muted">
                         Twoja książka którą zainteresowany jest inny użytkownik
                     </small></th>
-                    <th>KONTRAKTOR<small class="form-text text-muted">
+                    <th>Kontraktor<small class="form-text text-muted">
                         Nazwa użytkowanika który zaproponował Ci wymianę
                     </small></th>
-                    <th>DATA</th>
-                    <th>AKCJA</th>
+                    <th>Data</th>
+                    <th>Akcja</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -169,11 +169,11 @@
             <table id="table2" class="display table table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>NAZWA KSIĄŻKI</th>
-                    <th>KONTRAKTOR</th>
-                    <th>STATUS TRANZAKCJI</th>
-                    <th>DATA</th>
-                    <th>AKCJA</th>
+                    <th>Nazwa książki</th>
+                    <th>Kontraktor</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Akcja</th>
                 </tr>
                 </thead>
                 <tbody>

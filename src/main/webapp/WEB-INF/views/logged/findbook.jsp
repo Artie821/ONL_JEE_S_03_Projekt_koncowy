@@ -94,11 +94,10 @@
             <table id="table" class="display table table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>ISBN</th>
-                    <th>TYTUŁ</th>
-                    <th>AUTOR</th>
-                    <th>OPIS</th>
-                    <th>AKCJA</th>
+                    <th>Isbn</th>
+                    <th>Tytuł</th>
+                    <th>Autor</th>
+                    <th>Akcja</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -107,7 +106,6 @@
                         <td><c:out value="${book.isbn}"/></td>
                         <td><c:out value="${book.title}"/></td>
                         <td><c:out value="${book.author}"/></td>
-                        <td><c:out value="${book.description}"/></td>
                         <td>
                             <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal"
                                     data-target="#propModal" data-name="${book.id}" data-book="${book.title}">
