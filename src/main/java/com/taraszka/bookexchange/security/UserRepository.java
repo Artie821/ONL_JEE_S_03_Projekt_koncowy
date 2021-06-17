@@ -1,11 +1,12 @@
 package com.taraszka.bookexchange.security;
 
-import com.taraszka.bookexchange.entity.User;
+
+import com.taraszka.bookexchange.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findByUsername(String username);
-    User findByEmail(String email);
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+    UserEntity findByUsername(String username);
+    UserEntity findByEmail(String email);
 }

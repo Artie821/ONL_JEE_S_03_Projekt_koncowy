@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Entity
 @Data
-public class User {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

@@ -1,7 +1,7 @@
 package com.taraszka.bookexchange.services;
 
 import com.taraszka.bookexchange.entity.Book;
-import com.taraszka.bookexchange.entity.User;
+
 
 import java.util.List;
 import java.util.Optional;

@@ -2,7 +2,7 @@ package com.taraszka.bookexchange.repository;
 
 import com.taraszka.bookexchange.entity.Book;
 import com.taraszka.bookexchange.entity.Transactions;
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,10 +15,10 @@ public interface TransactionsRepository extends JpaRepository<Transactions, Long
 
 
     @Query("select t from Transactions t where t.owner = ?1 AND t.status = ?2")
-    List<Transactions> findAllByUser(User owner, int status);
+    List<Transactions> findAllByUser(UserEntity owner, int status);
 
     @Query("select t from Transactions t where t.contractor = ?1 AND t.status = ?2")
-    List<Transactions> findAllByContractor(User contractor, int status);
+    List<Transactions> findAllByContractor(UserEntity contractor, int status);
 
     @Transactional
     @Modifying

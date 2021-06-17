@@ -27,6 +27,6 @@ public class Book {
     private String description;
     private boolean visible;
     @ManyToOne
-    private User user;
+    private UserEntity user;
 
 }

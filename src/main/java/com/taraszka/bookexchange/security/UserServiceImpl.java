@@ -1,6 +1,6 @@
 package com.taraszka.bookexchange.security;
 
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import com.taraszka.bookexchange.exeptions.UserAlreadyExistException;
 import com.taraszka.bookexchange.exeptions.UserAlreadyExistExceptionEmail;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -24,12 +24,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByUserName(String username) {
+    public UserEntity findByUserName(String username) {
         return userRepository.findByUsername(username);
     }
 
     @Override
-    public void saveUser(User user) throws UserAlreadyExistException, UserAlreadyExistExceptionEmail {
+    public void saveUser(UserEntity user) throws UserAlreadyExistException, UserAlreadyExistExceptionEmail {
         if(checkIfUserExist(user.getEmail())){
             throw new UserAlreadyExistExceptionEmail("User already exists for this email");
         }

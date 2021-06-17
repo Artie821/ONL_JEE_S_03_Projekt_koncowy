@@ -1,6 +1,6 @@
 package com.taraszka.bookexchange.security;
 
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -22,7 +22,7 @@ public class SpringDataUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) {
-        User user = userService.findByUserName(username);
+        UserEntity user = userService.findByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException(username);
         }

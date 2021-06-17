@@ -2,7 +2,7 @@ package com.taraszka.bookexchange.controller;
 
 
 import com.taraszka.bookexchange.entity.Book;
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import com.taraszka.bookexchange.exeptions.UserAlreadyExistException;
 import com.taraszka.bookexchange.exeptions.UserAlreadyExistExceptionEmail;
 import com.taraszka.bookexchange.security.UserService;
@@ -53,12 +53,12 @@ public class UserController {
 
     @RequestMapping(value = {"/admin/register"}, method = RequestMethod.GET)
     public String register(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("userEntity", new UserEntity());
         return "register";
     }
 
     @PostMapping("/admin/register")
-    public String saveUser(@Valid User user, BindingResult result, Model model) {
+    public String saveUser(@Valid UserEntity user, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "register";
         }

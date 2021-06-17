@@ -1,7 +1,6 @@
 package com.taraszka.bookexchange.services;
 
 import com.taraszka.bookexchange.entity.Book;
-import com.taraszka.bookexchange.entity.User;
 import com.taraszka.bookexchange.repository.BookRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

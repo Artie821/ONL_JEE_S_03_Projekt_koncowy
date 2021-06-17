@@ -2,7 +2,7 @@ package com.taraszka.bookexchange.controller;
 
 
 import com.taraszka.bookexchange.entity.Book;
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import com.taraszka.bookexchange.repository.TransactionsRepository;
 import com.taraszka.bookexchange.security.UserRepository;
 import com.taraszka.bookexchange.services.BookService;
@@ -52,7 +52,7 @@ public class BookController {
         }
         model.addAttribute("book", books);
         model.addAttribute("username", username);
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         return "logged/dashboard";
@@ -68,7 +68,7 @@ public class BookController {
         if(books.size()==0){
             model.addAttribute("newuser", true);
         }
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         return "logged/addbook";
@@ -84,7 +84,7 @@ public class BookController {
         if(books.size()==0){
             model.addAttribute("newuser", true);
         }
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
 
@@ -135,7 +135,7 @@ public class BookController {
         if(booklist.size()==0){
             model.addAttribute("newuser", true);
         }
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         return "logged/findbook";
@@ -145,7 +145,7 @@ public class BookController {
     public String save(@Valid Book book, BindingResult result, Model model) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         model.addAttribute("username", username);
@@ -179,7 +179,7 @@ public class BookController {
         }
         model.addAttribute("Onebook", bookService.get(id).get());
         model.addAttribute("username", username);
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         return "logged/bookdetails";

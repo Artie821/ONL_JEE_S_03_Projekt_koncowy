@@ -77,7 +77,7 @@
                     Taki email już istnieje!
                 </div>
             </c:if>
-                <form:form method="post" modelAttribute="user">
+                <form:form method="post" modelAttribute="userEntity">
                     <div class="form-group">
                         <label for="username">Login:</label>
                         <form:input path="username" class="form-control" placeholder="Podaj login minimum 6 znaków"/>

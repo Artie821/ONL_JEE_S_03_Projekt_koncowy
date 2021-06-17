@@ -2,7 +2,7 @@ package com.taraszka.bookexchange.controller;
 
 import com.taraszka.bookexchange.entity.Book;
 import com.taraszka.bookexchange.entity.Transactions;
-import com.taraszka.bookexchange.entity.User;
+import com.taraszka.bookexchange.entity.UserEntity;
 import com.taraszka.bookexchange.repository.TransactionsRepository;
 import com.taraszka.bookexchange.security.UserRepository;
 import com.taraszka.bookexchange.services.BookService;
@@ -34,10 +34,10 @@ public class TransactionController {
     @RequestMapping(value = {"/{id}"}, method = RequestMethod.GET)
     public String Addtransaction(Model model, @PathVariable long id) {
 
-        User contractor = bookService.get(id).get().getUser();
+        UserEntity contractor = bookService.get(id).get().getUser();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         Transactions transactions = new Transactions();
         Book book = bookService.get(id).get();
         List<Book> books = bookService.getBooksVisibleForUser(username);
@@ -60,7 +60,7 @@ public class TransactionController {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         List<Transactions> list = transactionsRepository.findAllByContractor(user, 1);
         List<Transactions> prop = transactionsRepository.findAllByUser(user, 1);
         List<Book> books = bookService.getBooksVisibleForUser(username);
@@ -81,10 +81,10 @@ public class TransactionController {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         Transactions transactions = transactionsRepository.getOne(id);
         model.addAttribute("username", username);
-        User contactor = transactions.getOwner();
+        UserEntity contactor = transactions.getOwner();
         String cName = contactor.getUsername();
         List<Book> books = bookService.getBooksVisibleForUser(cName);
         if (books.size() == 0) {
@@ -105,10 +105,10 @@ public class TransactionController {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         Transactions transactions = transactionsRepository.getOne(transactionId);
         model.addAttribute("username", username);
-        User contactor = transactions.getOwner();
+        UserEntity contactor = transactions.getOwner();
         String cName = contactor.getUsername();
         Book book = bookService.get(bookId).get();
         model.addAttribute("contractor", cName);
@@ -127,7 +127,7 @@ public class TransactionController {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         transactionsRepository.UpdateContractorBookIdWhereTransacionIdIs(transactionId, bookService.get(bookId).get());
         transactionsRepository.UpdateStatusWhereTransacionIdIs(transactionId, 2);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
@@ -138,7 +138,7 @@ public class TransactionController {
         bookService.update(book);
         Transactions transactions = transactionsRepository.getOne(transactionId);
         Book book1contractor = bookService.get(transactions.getBook().getId()).get();
-        User contactor = transactions.getOwner();
+        UserEntity contactor = transactions.getOwner();
         String cName = contactor.getUsername();
         List<Book> books = bookService.getBooksVisibleForUser(cName);
         model.addAttribute("contractor", cName);
@@ -170,7 +170,7 @@ public class TransactionController {
     public String history(Model model) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails) principal).getUsername();
-        User user = userRepository.findByUsername(username);
+        UserEntity user = userRepository.findByUsername(username);
         int transNumber = transactionsRepository.findAllByContractor(user, 1).size();
         model.addAttribute("number", transNumber);
         model.addAttribute("username", username);

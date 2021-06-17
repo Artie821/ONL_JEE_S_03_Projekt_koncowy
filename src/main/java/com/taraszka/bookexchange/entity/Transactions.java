@@ -21,7 +21,7 @@ public class Transactions {
     private int status;
     private LocalDateTime transactionDate;
     @ManyToOne
-    private User owner;
+    private UserEntity owner;
     @ManyToOne
-    private User contractor;
+    private UserEntity contractor;
 }
