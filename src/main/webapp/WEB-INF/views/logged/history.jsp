@@ -175,7 +175,7 @@
                 <p><em>Elementy na tej liście pojawiają się gdy wyszukasz książke innego użytkownika i zaproponujesz mu wymianę a on ją zaakceptuje i wskaże jedną z twoich książek na którą chce się wymienić.
                 </em></p>
             </div>
-            <table id="table2" class="display table table-striped">
+            <table id="table2" class="display table table-responsive table-striped" style="width: 100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>Data</th>
