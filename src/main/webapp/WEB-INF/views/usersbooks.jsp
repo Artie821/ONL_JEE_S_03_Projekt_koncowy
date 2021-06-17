@@ -64,13 +64,13 @@
     </div>
     <div class="row">
         <div class="container p-3 my-3 border shadow p-1 mb-1 bg-white rounded">
-            <table id="table" class="display table table-striped" style="width:100%">
+            <table id="table" class="display table table-responsive table-striped" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
-                    <th>ISBN</th>
-                    <th>TYTUŁ</th>
-                    <th>AUTOR</th>
-                    <th>OPIS</th>
+                    <th>Isbn</th>
+                    <th>Tytuł</th>
+                    <th>Autor</th>
+                    <th>Opis</th>
                 </tr>
                 </thead>
                 <tbody>

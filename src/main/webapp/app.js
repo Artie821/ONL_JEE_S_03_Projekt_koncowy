@@ -14,8 +14,16 @@ $(document).ready(function() {
             },
             "infoFiltered": "(przefiltorwano z _MAX_ rekordów)"
         }
-    } );
+    },
+    {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    }
+    );
 } );
+
 
 $(document).ready(function() {
     $('#table2').DataTable( {
@@ -33,7 +41,13 @@ $(document).ready(function() {
             },
             "infoFiltered": "(przefiltorwano z _MAX_ rekordów)"
         }
-    } );
+    },
+        {
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true
+        } );
 } );
 
 function goBack() {

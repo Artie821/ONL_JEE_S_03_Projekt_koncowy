@@ -98,7 +98,7 @@
                     Jeśli żadna z książek twojego kontrachenta nie wyda Ci się interesująca możesz anulować całą tranazkcję.
                     </em></p>
             </div>
-            <table id="table" class="display table table-striped">
+            <table id="table" class="display table table-striped" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>Nazwa książki<small class="form-text text-muted">
@@ -166,7 +166,7 @@
                     Teraz pozostaje Ci tylko czekać na decyzję właścicela książki. Możesz oczywiście anulować całą tranzakcję.
                 </em></p>
             </div>
-            <table id="table2" class="display table table-striped">
+            <table id="table2" class="display table table-striped" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>Nazwa książki</th>
