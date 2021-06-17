@@ -23,7 +23,6 @@ public class TransactionController {
 
     private final BookService bookService;
     private final UserRepository userRepository;
-
     private final TransactionsRepository transactionsRepository;
 
     public TransactionController(BookService bookService, UserRepository userRepository, TransactionsRepository transactionsRepository) {
