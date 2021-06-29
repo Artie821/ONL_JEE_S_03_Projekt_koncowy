@@ -101,7 +101,7 @@
             <div>
                 <br>
                 <h5>
-                    3. Jeśli któryś z właścicieli inetresującej Cię książki zgodzi się na wymianę na jedną z twoich, lub jeśli ktoś inny zaproponuje Ci wymianę i zanjdziesz coś interesującego w jego biblioteczce, nie pozostaje Ci nic innego jak finalizacja tranzakcji i cieszenie się nową lekturą!
+                    3. Jeśli któryś z właścicieli inetresującej Cię książki zgodzi się na wymianę na jedną z twoich, lub jeśli ktoś inny zaproponuje Ci wymianę i znajdziesz coś interesującego w jego biblioteczce, nie pozostaje Ci nic innego jak finalizacja tranzakcji i cieszenie się nową lekturą!
                     <br>
                     <small></small>
                 </h5>
