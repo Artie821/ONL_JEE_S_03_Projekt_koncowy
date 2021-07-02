@@ -11,7 +11,7 @@ Used technolgies:
 * Spring Boot
 * MySql database
 * Polish National Library API
-(finding books in National Library databes by ISBN number while adding new books)
+(finding books in National Library database by ISBN number while adding new books)
 * Bootstrap 4.5
 
 * [FOR DEMO CLICK HERE](https://bookexchangeapp.herokuapp.com/)
