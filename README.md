@@ -15,6 +15,8 @@ Used technolgies:
 * Bootstrap 4.5
 
 * [FOR DEMO CLICK HERE](https://bookexchangeapp.herokuapp.com/)
+* DEMO LOGIN: Artur9 PASS: Artur9
+* DEMO LOGIN 2: artur1 PASS: artur1
 
 ![alt text](https://github.com/Artie821/ONL_JEE_S_03_Projekt_koncowy/blob/master/src/main/webapp/images/screencapture-bookexchangeapp-herokuapp-2021-06-29-12_59_22.jpg)
 
